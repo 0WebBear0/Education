@@ -1,4 +1,4 @@
-package education.java.Vigenere;
+package education.java.Univursity.Vigenere;
 
 public class Output {
 
