@@ -12,7 +12,9 @@ public class ShopPlaces {
         shop1.insertFirst(item2);
         shop1.insertFirst(item3);
 
-        shop1.printAll();
+        shop1.deleteById("2");
+        System.out.println(shop1.findByName("1").getPrise()*0.73);
+//        shop1.printAll();
 
     }
 }

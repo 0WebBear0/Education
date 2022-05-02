@@ -21,14 +21,33 @@ public class Shop {
         Item item = head;
 
         String currentName = item.getItemName();
-
-        while (currentName != name){
-            if (item.next == null){
-                return null;
+        while (item != null){
+            if (item.getItemName().equals(name)){
+                return item;
             }
             else item = item.next;
+            currentName = item.getItemName();
         }
         return item;
+    }
+
+    public String deleteById(String name){
+        Item item = head;
+
+        String currentName = item.getItemName();
+        while (item != null){
+            if (item.getItemName().equals(name)){
+                if (item.next != null){
+                    item = item.next;
+                }
+                else item = null;
+
+                return "Nice";
+            }
+            else item = item.next;
+            currentName = item.getItemName();
+        }
+        return "Element is not founded";
     }
 
     public void printAll(){
