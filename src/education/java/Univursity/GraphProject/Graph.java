@@ -18,7 +18,7 @@ public class Graph {
 		nVerts = 0;
 		for (int j = 0; j < MAX_VERTS; j++) // Матрица смежности
 			for (int k = 0; k < MAX_VERTS; k++) // заполняется нулями
-				adjMat[j][k] = 0;
+				adjMat[j][k] = -1;
 		theStack = new StackForGraph();
 		theQueue = new QueueForGraph();
 	}
@@ -38,6 +38,11 @@ public class Graph {
 	// -------------------------------------------------------------
 	public void addEdgeSingle(int start, int end) {
 		adjMat[start][end] = 1;
+	}
+
+	// -------------------------------------------------------------
+	public void addEdgeSingleWithData(int start, int end, int data) {
+		adjMat[start][end] = data;
 	}
 
 	// -------------------------------------------------------------
